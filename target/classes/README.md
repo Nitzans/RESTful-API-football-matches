@@ -1,10 +1,14 @@
 ## Football Games Assignment
-
-This project contains controller which provided 4 APIs:
+#### Description:
+This project contains the main controller (MatchController) which providing API for 4 actions:
 1. Get list of matches by team.
 2. Get list of matches by team filtered by status.
 3. Get list of matches by tournament.
 4. Get list of matches by tournament filtered by status.
+
+Examples for the commands can be found in "Running instruction" below.
+
+The input data is being read in 'DataStore' class, where it also being organized in hash maps for easy access.
 
 #### Running instructions:
 - Run 'Application.java'.

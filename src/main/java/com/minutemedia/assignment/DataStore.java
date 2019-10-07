@@ -10,8 +10,8 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class DataStore {
-    private final String upcomingFilePath = "src/main/resources/result_upcoming.csv";
-    private final String playedFilePath = "src/main/resources/result_played.csv";
+    private static final String upcomingFilePath = "src/main/resources/result_upcoming.csv";
+    private static final String playedFilePath = "src/main/resources/result_played.csv";
     private Map<String, List<Match>> matchesByTeam = new HashMap<>();
     private Map<String, List<Match>> matchesByTournament = new HashMap<>();
 
@@ -89,7 +89,7 @@ public class DataStore {
         matchesByTournament.get(match[4]).add(new finishedMatch(match[0], match[2], match[4], match[5], Integer.valueOf(match[1]), Integer.valueOf(match[3])));
     }
 
-    public List<Match> getTeamMatches(String teamName) {
+    public List<Match> getTeamMatches(String teamName){
         return matchesByTeam.get(teamName);
     }
 
