@@ -2,13 +2,14 @@ package com.minutemedia.assignment.exceptions;
 
 public class TournamentNotFoundException extends Exception {
 
-    private String errorMessage=null;
+    private String errorMessage;
 
-    public TournamentNotFoundException(String errorMessage) {
-        super(errorMessage);
+    public TournamentNotFoundException() {
+        super();
+        errorMessage = "Tournament name does not exist";
     }
 
-    public String getErrorMessage() {
+    String getErrorMessage() {
         return errorMessage;
     }
 }

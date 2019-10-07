@@ -2,13 +2,14 @@ package com.minutemedia.assignment.exceptions;
 
 public class TeamNotFoundException extends Exception {
 
-    private String errorMessage=null;
+    private String errorMessage;
 
-    public TeamNotFoundException(String errorMessage) {
-        super(errorMessage);
+    public TeamNotFoundException() {
+        super();
+        errorMessage = "Team name does not exist";
     }
 
-    public String getErrorMessage() {
+    String getErrorMessage() {
         return errorMessage;
     }
 }

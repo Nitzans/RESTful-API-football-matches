@@ -2,13 +2,14 @@ package com.minutemedia.assignment.exceptions;
 
 public class InvalidStatusException extends Exception {
 
-    private String errorMessage=null;
+    private String errorMessage;
 
-    public InvalidStatusException(String errorMessage) {
-        super(errorMessage);
+    public InvalidStatusException() {
+        super();
+        errorMessage = "Invalid match status. Only 'upcoming' or 'played' are acceptable.";
     }
 
-    public String getErrorMessage() {
+    String getErrorMessage() {
         return errorMessage;
     }
 }

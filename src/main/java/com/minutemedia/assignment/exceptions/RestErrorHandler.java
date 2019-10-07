@@ -13,21 +13,21 @@ public class RestErrorHandler {
     @ResponseStatus(HttpStatus.NOT_FOUND)
     @ResponseBody
     public Object processValidationError(TeamNotFoundException ex) {
-        return "Team name does not exist";
+        return ex.getErrorMessage();
     }
 
     @ExceptionHandler(TournamentNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
     @ResponseBody
     public Object processValidationError(TournamentNotFoundException ex) {
-        return "Tournament name does not exist";
+        return ex.getErrorMessage();
     }
 
     @ExceptionHandler(InvalidStatusException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
     @ResponseBody
     public Object processValidationError(InvalidStatusException ex) {
-        return "Invalid match status. Only 'upcoming' or 'played' are acceptable.";
+        return ex.getErrorMessage();
     }
 
 }
