@@ -12,7 +12,7 @@
 - The input data is read in 'DataStore' class and stored in hash maps for an easy access.
 
 #### Running instructions:
-- Run 'Application.java'.
+- Run 'Application.java' located in \src\main\java\com\minutemedia\assignment\app.
 - In your browser (or Postman application) type GET requests in the following format:
 
     * For all the matches which TEAMNAME participates in: http://localhost:8080/team?name=TEAM-NAME
